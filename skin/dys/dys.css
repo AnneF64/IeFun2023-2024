@@ -1,0 +1,217 @@
+@font-face {
+	font-family: "OpenDyslexic-Regular";
+	src: url(fonts/OpenDyslexic-Regular.otf);
+}
+@font-face {
+	font-family: "OpenDyslexic-Bold";
+	src: url(fonts/OpenDyslexic-Bold.otf);
+}
+@font-face {
+	font-family: "OpenDyslexic-Italic";
+	src: url(fonts/OpenDyslexic-Italic.otf);
+}
+@font-face {
+	font-family: "OpenDyslexicMono-Regular";
+	src: url(fonts/OpenDyslexicMono-Regular.otf);
+}
+@font-face {
+	font-family: "OpenDyslexic-BoldItalic";
+	src: url(fonts/OpenDyslexic-BoldItalic.otf);
+}
+
+.dysBtnTogglePanel{
+	display: inline-block;
+	order:4;
+	width: 44px;
+	padding: 4px 0 0 4px;
+	margin-inline-start: 10px;
+	max-height: 42px;
+	position: absolute;
+	top: 0;
+}
+html[dir='ltr'] .dysBtnTogglePanel{
+	left: 200px;
+}
+html[dir='rtl'] .dysBtnTogglePanel{
+	right: 200px;
+}
+html[dir='ltr'] .scorm .dysBtnTogglePanel{
+	left: 240px;
+}
+html[dir='rtl'] .scorm .dysBtnTogglePanel{
+	right: 240px;
+}
+html[dir='ltr'] .scorm.emeraude .dysBtnTogglePanel{
+	left: 280px;
+}
+html[dir='rtl'] .scorm.emeraude .dysBtnTogglePanel{
+	right: 280px;
+}
+html[dir='ltr'] .sco .dysBtnTogglePanel{
+	left: 20px;
+}
+html[dir='rtl'] .sco .dysBtnTogglePanel{
+	right: 20px;
+}
+html[dir='ltr'] .rubis .dysBtnTogglePanel{
+	left: 80px;
+}
+html[dir='rtl'] .rubis .dysBtnTogglePanel{
+	right: 80px;
+}
+.dysBtnTogglePanel a{
+	display: inline-block;
+	box-sizing: border-box;
+	width: 40px;
+	height: 40px;
+	padding-inline-start: 40px;
+	overflow: hidden;
+	background: url(img/menu-dys.svg) no-repeat top;
+	background-size: 100%;
+	background-position: 0px 0px;
+}
+
+.dysBtnTogglePanel a:hover{
+	opacity: 0.9;
+}
+.dysPanelActive_true .dysBtnTogglePanel{
+	background-color: var(--accentLightBG);
+	border-radius: 0 0 30px 30px;
+}
+.dysPanelActive_true .dysBtnTogglePanel a{
+	background-position: 0px -80px;
+}
+
+div.dysPanel{
+	visibility:hidden;
+	font-size: 0.8em;
+	display:flex;
+	padding-block: 0 0.5em;
+	padding-inline: calc(50vw - (var(--maxWidth, 1300px) / 2 - var(--menuWidth, 300px) - 30px)) calc(50vw - (var(--maxWidth, 1300px) / 2));
+}
+
+.emeraude .zen_true div.dysPanel,
+.rubis .zen_true div.dysPanel{
+	padding: 0 calc(50vw - (var(--maxWidth, 1300px) / 2)) 0.5em  calc(50vw - (var(--maxWidth, 1300px) / 2));
+}
+
+div.dysPanel > span{
+	flex: 1 1 auto;
+	display:flex;
+	justify-content: center;
+	background-color: var(--accentLightBG);
+	border-radius:0.5em;
+	margin-inline-end:1em;
+}
+
+.emeraude.dysPanelActive_true .zen_true div.dysPanel,
+.rubis.dysPanelActive_true .zen_true div.dysPanel,
+.dysPanelActive_true div.dysPanel {
+	visibility:visible;
+}
+.dysPanelActive_true .zen_true div.dysPanel {
+	visibility:hidden;
+}
+.dysBtnCheck_true,.dysBtnCheck_false {
+	display: inline-block;
+	padding-inline-start: 20px;
+	margin:0 5px;
+	text-decoration: none;
+	color: black;
+	min-height:20px;
+	line-height:20px;
+}
+.dysBtnCheck_true {
+	background: url(img/chkOn.png) no-repeat center left;
+}
+.dysBtnCheck_false {
+	background: url(img/chkOff.png) no-repeat center left;
+}
+.dysFontActive_true {
+	font-family: "OpenDyslexic-Regular";
+}
+.dysFontActive_true #menu ul.mnu,
+.dysFontActive_true .op_txt_is_quote,
+.dysFontActive_true .op_labelTxt_is_quote,
+.dysFontActive_true .op_clozeTxt_is_quote {
+	font-family: "OpenDyslexic-Italic";
+}
+.dysFontActive_true header h1{
+	line-height:1em;
+}
+.dysFontActive_true p{
+	font-size: inherit;
+}
+.dysFontActive_true ul#accessibility{
+	font-size:6pt;
+}
+.dysFontActive_true #titleRoot{
+	font-size:0.9em;
+}
+.dysAltLineColor_true .dysColor_0{
+	color:#DD0000;
+}
+.dysAltLineColor_true .dysColor_1{
+	color:#00AA00;
+}
+.dysAltLineColor_true .dysColor_2{
+	color:#0000FF;
+}
+.dysMoreSpace_true #content{
+	line-height:1.5;
+	word-spacing:0.6em;
+}
+.dysMoreSpace_true.dysFontActive_true #content{
+	line-height:2;
+}
+.dysBtnFontLarger,
+.dysBtnFontSmaller{
+	position:absolute;
+	width:20px;
+	height:20px;
+}
+.dysFontSizer{
+	display:inline-block;
+	position:relative;
+	background: url(img/fontSizer.png) no-repeat center center;
+	margin:0 5px;
+	height:20px;
+	width:60px;
+	min-width: 60px;
+	line-height:20px;
+}
+.dysBtnFontSmaller{
+	background: url(img/fontSmaller.png) no-repeat center left;
+	margin-inline-end:10px;
+}
+html[dir='ltr'] .dysBtnFontSmaller{
+	left: 0;
+}
+html[dir='rtl'] .dysBtnFontSmaller{
+	right: 0;
+}
+.dysBtnFontLarger{
+	background: url(img/fontLarger.png) no-repeat center left;
+	margin-inline-start:10px;
+}
+html[dir='ltr'] .dysBtnFontLarger{
+	right:0;
+}
+html[dir='rtl'] .dysBtnFontLarger{
+	left:0;
+}
+.dysBtnFontLarger span,
+.dysBtnFontSmaller span{
+	display: none;
+}
+
+@media (max-width: 1300px) {
+	div.dysPanel{
+		padding-block: 0 0.5em;
+		padding-inline: 1em 0.5em;
+	}
+	.sco div.dysPanel{
+		padding-block: 0 0.5em;
+		padding-inline: 1em 0.5em;
+	}
+}
